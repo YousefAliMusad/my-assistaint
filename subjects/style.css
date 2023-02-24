@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cairo', sans-serif;
+    font-family: 'El Messiri', sans-serif;
+    font-family: 'Rubik', sans-serif;
+    user-select: none;
+}
+body {
+    overflow-x: hidden;
+    background-color:darkslategray;
+    /* min-height: 100vh; */
+    margin-bottom: 100px;
+}
+.header {
+    width: 100%;
+    height: 60px;
+    color: white;
+    background-color: #01987a;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header a {
+    margin-left: 20px;
+    font-size: 25px;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    transition: 0.1s linear;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header .delete {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 33, 33);
+    font-size: 22px;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: 0.1s linear;
+}
+.header a:hover {
+    background-color: #67696ba7;
+}
+.header .delete:hover {
+    background-color: #67696ba7;
+}
+.content .fa-input{
+    width: 100%;
+    position: fixed;
+    height: 70px;
+    bottom: 0;
+    left: 0;
+    background-color: #242527;
+    border-top: 2px solid #67696B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+}
+.fa-input .ch-input {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    height: 50px;
+    background-color: #393A3C;
+    border-radius: 35px;
+    justify-content: space-between;
+}
+.fa-input .ch-input .inp{
+    border-radius: 35px 0 0 35px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    height: 50px;
+    padding: 0 20px;
+    width: calc(100% - 50px);
+    font-size: 20px;
+    caret-color: #01987a;
+    color: #b6b6b6;
+}
+.fa-input .ch-input .inp::placeholder{
+    color: #929495;
+}
+.fa-input .ch-input .button{
+    width: 50px;
+    height: 50px;
+    border-radius:0 35px 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.fa-input .ch-input .button p{
+    border: 2px solid #929495;
+    color:#929495;
+    border-radius: 50%;
+    font-size: 23px;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content .table {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 80px;
+    width: 90%;
+    border: 2px solid white;
+    border-bottom:none;
+}
+.content .table .head{
+    width: 100%;
+    height: 65px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid white;
+    text-transform: capitalize;
+    font-size: 25px;
+    background-color: #01987a;
+}
+.content .table .item{
+    min-width: 100%;
+    min-height: 55px;
+    color: white;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid white;
+}
+.content .table .item .cont{
+
+    margin-left: 20px;
+    display: flex;
+}
+.content .table .item .cont .grade{
+    margin-right: 20px;
+}
