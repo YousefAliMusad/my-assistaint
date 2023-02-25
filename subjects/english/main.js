@@ -15,7 +15,7 @@ const data_rank = JSON.parse(localStorage.getItem("item-rank2")) ? JSON.parse(lo
 
 
 function creteLi(val , Valrank) {
-    var item = document.createElement("div");
+    let item = document.createElement("div");
     item.className = "item"
     let cont = document.createElement("div");
     cont.className = "cont"
@@ -33,15 +33,12 @@ function creteLi(val , Valrank) {
 data.map(function(item , rVal){
     creteLi(item , rVal)
 })
-
 add.onclick = function(){
     if (inp.value != "") {
         for(let i = 0; i <= vals.length ; i++) {
             var rank = i
         }
         itam_rank.push(rank)
-        itam_rank.push(rank)
-        vals.push(inp.value)
         vals.push(inp.value)
         localStorage.setItem("item2", JSON.stringify(vals))
         creteLi(inp.value , rank)
@@ -60,9 +57,9 @@ refuse.onclick = function() {
     confirmZone.style.cssText = "dispaly:none"
 }
 accept.onclick = function() {
-    confirmZone.style.cssText = "display:none"
     localStorage.removeItem("item2")
     localStorage.removeItem("item-rank2")
     items.innerHTML = ""
     vals = []
+    confirmZone.style.cssText = "display:none"
 }

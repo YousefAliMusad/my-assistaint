@@ -13,7 +13,6 @@ const data = JSON.parse(localStorage.getItem("item5")) ? JSON.parse(localStorage
 var itam_rank = JSON.parse(localStorage.getItem("item-rank5")) ? JSON.parse(localStorage.getItem("item-rank5")) : [];
 const data_rank = JSON.parse(localStorage.getItem("item-rank5")) ? JSON.parse(localStorage.getItem("item-rank5")) : [];
 
-
 function creteLi(val , Valrank) {
     var item = document.createElement("div");
     item.className = "item"
@@ -40,8 +39,6 @@ add.onclick = function(){
             var rank = i
         }
         itam_rank.push(rank)
-        itam_rank.push(rank)
-        vals.push(inp.value)
         vals.push(inp.value)
         localStorage.setItem("item5", JSON.stringify(vals))
         creteLi(inp.value , rank)
@@ -49,7 +46,6 @@ add.onclick = function(){
         // console.log(vals.includes("غايب"))
     }
 }
-
 
 
 
@@ -66,3 +62,6 @@ accept.onclick = function() {
     items.innerHTML = ""
     vals = []
 }
+items.forEach(e => {
+    console.log(e)
+});

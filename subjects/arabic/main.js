@@ -40,8 +40,6 @@ add.onclick = function(){
             var rank = i
         }
         itam_rank.push(rank)
-        itam_rank.push(rank)
-        vals.push(inp.value)
         vals.push(inp.value)
         localStorage.setItem("item", JSON.stringify(vals))
         creteLi(inp.value , rank)
