@@ -43,7 +43,7 @@ add.onclick = function(){
         itam_rank.push(rank)
         vals.push(inp.value)
         vals.push(inp.value)
-        localStorage.setItem("item", JSON.stringify(vals))
+        localStorage.setItem("item5", JSON.stringify(vals))
         creteLi(inp.value , rank)
         inp.value = ""
         // console.log(vals.includes("غايب"))
