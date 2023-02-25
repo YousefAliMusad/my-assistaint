@@ -7,6 +7,7 @@ body {
     overflow-x: hidden;
     background-color:darkslategray;
     min-height: 100vh;
+    /* margin-bottom: 80px; */
 }
 .fa-confirm {
     font-family: 'Cairo', sans-serif;
@@ -183,6 +184,7 @@ body {
     border: 2px solid white;
     border-bottom:none;
     font-family: 'Cairo', sans-serif;
+    margin-bottom: 120px;
 }
 .content .table .head{
     width: 100%;
