@@ -7,7 +7,7 @@ body {
     overflow-x: hidden;
     background-color:darkslategray;
     min-height: 100vh;
-    margin-bottom: 80px;
+    margin-bottom: 120px;
 }
 .fa-confirm {
     font-family: 'Cairo', sans-serif;
@@ -203,6 +203,7 @@ body {
     color: white;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     border-bottom: 2px solid white;
 }
 .content .table .item .cont{
@@ -211,4 +212,15 @@ body {
 }
 .content .table .item .cont .grade{
     margin-right: 20px;
+}
+.table .item .delete-item{
+    height: 55px;
+    width: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#01987a;
+    font-size: 20px;
+    color: #ca1e1e;
+    cursor: pointer;
 }

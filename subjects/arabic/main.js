@@ -14,12 +14,18 @@ var itam_rank = JSON.parse(localStorage.getItem("item-rank")) ? JSON.parse(local
 const data_rank = JSON.parse(localStorage.getItem("item-rank")) ? JSON.parse(localStorage.getItem("item-rank")) : [];
 
 
-function creteLi(val , Valrank) {
-    var item = document.createElement("div");
-    item.className = "item"
+
+function creteLi(val , Valrank ) {
+    let item2 = document.createElement("div");
+    item2.className = "item"
+    let Del = document.createElement("div");
+    Del.className = "delete-item"
+    let DelIcon = document.createElement("i");
+    DelIcon.className = "fa-solid fa-trash"
+    Del.appendChild(DelIcon)
     let cont = document.createElement("div");
     cont.className = "cont"
-    item.appendChild(cont);
+    item2.appendChild(cont);
     let grade = document.createElement("div");
     grade.className = "grade"
     grade.textContent = `${Valrank + 1} - `
@@ -28,7 +34,8 @@ function creteLi(val , Valrank) {
     date.className = "date"
     cont.appendChild(grade);
     cont.appendChild(date);
-    items.appendChild(item);
+    items.appendChild(item2);
+    item2.appendChild(Del);
 }
 data.map(function(item , rVal){
     creteLi(item , rVal)
@@ -41,10 +48,13 @@ add.onclick = function(){
         }
         itam_rank.push(rank)
         vals.push(inp.value)
+        // ItemDivArray.push()
+        // itemdiv.push()
         localStorage.setItem("item", JSON.stringify(vals))
         creteLi(inp.value , rank)
+        console.log(jo)
+        console.log(delBtn)
         inp.value = ""
-        // console.log(vals.includes("غايب"))
     }
 }
 
