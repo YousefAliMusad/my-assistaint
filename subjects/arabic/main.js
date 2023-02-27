@@ -52,7 +52,9 @@ add.onclick = function(){
 
 
 Delete.onclick = function(){
-    confirmZone.style.cssText = "display:flex"
+    if (vals.length > 0) {
+        confirmZone.style.cssText = "display:flex"
+    }
 }
 refuse.onclick = function() {
     confirmZone.style.cssText = "dispaly:none"
