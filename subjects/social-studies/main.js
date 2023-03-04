@@ -62,6 +62,3 @@ accept.onclick = function() {
     items.innerHTML = ""
     vals = []
 }
-items.forEach(e => {
-    console.log(e)
-});

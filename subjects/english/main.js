@@ -54,7 +54,7 @@ Delete.onclick = function(){
     confirmZone.style.cssText = "display:flex"
 }
 refuse.onclick = function() {
-    confirmZone.style.cssText = "dispaly:none"
+    confirmZone.style.cssText = "display:none"
 }
 accept.onclick = function() {
     localStorage.removeItem("item2")

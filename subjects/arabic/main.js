@@ -10,17 +10,20 @@ let refuse = document.querySelector(".refuse")
 var vals = JSON.parse(localStorage.getItem("item")) ? JSON.parse(localStorage.getItem("item")) : [];
 const data = JSON.parse(localStorage.getItem("item")) ? JSON.parse(localStorage.getItem("item")) : [];
 
+var dayname = JSON.parse(localStorage.getItem("dayname")) ? JSON.parse(localStorage.getItem("dayname")) : [];
+const daynamedata = JSON.parse(localStorage.getItem("dayname")) ? JSON.parse(localStorage.getItem("dayname")) : [];
+
 var itam_rank = JSON.parse(localStorage.getItem("item-rank")) ? JSON.parse(localStorage.getItem("item-rank")) : [];
-const data_rank = JSON.parse(localStorage.getItem("item-rank")) ? JSON.parse(localStorage.getItem("item-rank")) : [];
+// const data_rank = JSON.parse(localStorage.getItem("item-rank")) ? JSON.parse(localStorage.getItem("item-rank")) : [];
 
 
 
-function creteLi(val , Valrank ) {
-    let item2 = document.createElement("div");
-    item2.className = "item"
+function creteLi(val , Valrank, DayNameData ) {
+    let item = document.createElement("div");
+    item.className = "item"
     let cont = document.createElement("div");
     cont.className = "cont"
-    item2.appendChild(cont);
+    item.appendChild(cont);
     let grade = document.createElement("div");
     grade.className = "grade"
     grade.textContent = `${Valrank + 1} - `
@@ -29,17 +32,17 @@ function creteLi(val , Valrank ) {
     date.className = "date"
     cont.appendChild(grade);
     cont.appendChild(date);
-    items.appendChild(item2);
+    items.appendChild(item);
 }
-data.map(function(item , rVal){
-    creteLi(item , rVal)
+data.map(function(item , rVal, datada){
+    creteLi(item , rVal, datada)
 })
-
 add.onclick = function(){
     if (inp.value != "") {
         for(let i = 0; i <= vals.length ; i++) {
             var rank = i
         }
+        let data = new Date();
         itam_rank.push(rank)
         vals.push(inp.value)
         localStorage.setItem("item", JSON.stringify(vals))
@@ -57,12 +60,14 @@ Delete.onclick = function(){
     }
 }
 refuse.onclick = function() {
-    confirmZone.style.cssText = "dispaly:none"
+    confirmZone.style.cssText = "display:none"
 }
 accept.onclick = function() {
     confirmZone.style.cssText = "display:none"
     localStorage.removeItem("item")
     localStorage.removeItem("item-rank")
+    localStorage.removeItem("dayname")
     items.innerHTML = ""
     vals = []
+    dayname = []
 }
